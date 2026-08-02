@@ -1,29 +1,29 @@
+<div align="center">
+
 # Always Sprint
 
-A Fabric client-side mod that automatically enables sprinting while the player moves forward. It does not add a keybind or bypass vanilla sprint restrictions.
+<img src="https://img.shields.io/badge/LICENSE-MIT-green?style=for-the-badge" alt="License">
+<img src="https://img.shields.io/badge/Platform-Fabric-blue?style=for-the-badge" alt="Platform">
+<img src="https://img.shields.io/badge/Author-PavitraXD-orange?style=for-the-badge" alt="Author">
 
-## Supported Minecraft versions
+**Always Sprint is a lightweight Fabric client mod that automatically makes
+your player sprint whenever you move forward. No sprint keybind, toggle option,
+or holding Ctrl is needed—just move forward and sprint.**
 
-| Minecraft version | Project directory |
-| --- | --- |
-| 1.21.11 | `1.21.11` |
-| 26.1 | `26.1` |
-| 26.2 | `26.2` |
+</div>
 
-## Build
+## Features
 
-Each supported version is an independent Gradle project. From the relevant directory, run:
+- Automatically enables sprinting while moving forward
+- Does not sprint while sneaking or using an item
+- Uses Minecraft's normal sprint state and server synchronisation
+- No keybinds, menus, or configuration required
+- Client-side Fabric mod
 
-```powershell
-.\gradlew.bat build
-```
+## Compatibility
 
-The remapped mod jar will be written to `build/libs/alwayssprint-1.0.0.jar`.
-
-## Installation
-
-Install the matching Fabric Loader and Fabric API for your Minecraft version, then place the built jar in your Minecraft `mods` folder.
+Available for Minecraft 1.21.11, 26.1, and 26.2 with Fabric.
 
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE).
+Always Sprint is licensed under the MIT License.

@@ -1,0 +1,68 @@
+plugins {
+	id 'fabric-loom' version "${loom_version}"
+	id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+	maven {
+		name = 'Mojang'
+		url = 'https://libraries.minecraft.net/'
+	}
+	maven {
+		name = 'Fabric'
+		url = 'https://maven.fabricmc.net/'
+	}
+}
+
+loom {
+	splitEnvironmentSourceSets()
+
+	mods {
+		"alwayssprint" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+}
+
+dependencies {
+	// Minecraft 26.2 ships fully unobfuscated - no client_mappings.txt
+	// is published. We supply a minimal stub tiny file so Loom has a
+	// valid namespace to work with (official -> named, identity).
+	mappings loom.layered {
+		mappings(file("src/main/resources/mappings/stub.tiny"))
+	}
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+	// Fabric API - gives us ClientTickEvents used by AlwaysSprintClient.
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+}
+
+processResources {
+	def version = project.version
+	inputs.property "version", version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+}
+
+java {
+	// Sources jar disabled: remapSourcesJar requires intermediary mappings
+	// which don't exist for 26.2 (unobfuscated release).
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}

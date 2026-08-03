@@ -22,7 +22,7 @@ or holding Ctrl is needed—just move forward and sprint.**
 
 ## Compatibility
 
-Available for Minecraft 1.21.11, 26.1, and 26.2 with Fabric.
+Available for Minecraft 1.21.11, 26.1, 26.1.2, and 26.2 with Fabric.
 
 ## License
 

@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "alwayssprint",
+	"version": "${version}",
+	"name": "Always Sprint",
+	"description": "Makes the player always sprint automatically - no toggle key, no holding Ctrl needed. Just move forward and you sprint.",
+	"authors": [
+		"MrDefault"
+	],
+	"contact": {
+		"sources": "https://github.com/PavitraXD/Always-Sprint"
+	},
+	"icon": "assets/alwayssprint/icon.png",
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.example.alwayssprint.AlwaysSprintClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

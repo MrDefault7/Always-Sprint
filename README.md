@@ -4,7 +4,7 @@
 
 <img src="https://img.shields.io/badge/LICENSE-MIT-green?style=for-the-badge" alt="License">
 <img src="https://img.shields.io/badge/Platform-Fabric-blue?style=for-the-badge" alt="Platform">
-<img src="https://img.shields.io/badge/Author-PavitraXD-orange?style=for-the-badge" alt="Author">
+<img src="https://img.shields.io/badge/Author-MrDefault-orange?style=for-the-badge" alt="Author">
 
 **Always Sprint is a lightweight Fabric client mod that automatically makes
 your player sprint whenever you move forward. No sprint keybind, toggle option,
@@ -22,7 +22,7 @@ or holding Ctrl is needed—just move forward and sprint.**
 
 ## Compatibility
 
-Available for Minecraft 1.21.11, 26.1, 26.1.2, and 26.2 with Fabric.
+Available for Minecraft 1.21.11, 26.1, 26.1.2, 26.2, and 26.3 with Fabric.
 
 ## License
 
